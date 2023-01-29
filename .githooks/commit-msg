@@ -1,0 +1,9 @@
+#!/bin/sh
+
+commit_regex='(chore:+|docs:+|feat:+|fix:+|Merge+|Initial commit)'
+error_message='Your commit message is invalid.'
+
+if ! grep -iqE "$commit_regex" "$1"; then
+    echo "$error_message" >&2
+    exit 1
+fi
