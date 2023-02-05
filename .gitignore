@@ -1,0 +1,4 @@
+bazel-bin
+bazel-microservices-go
+bazel-out
+bazel-testlogs

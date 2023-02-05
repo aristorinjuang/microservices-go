@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "internal",
+    srcs = ["internal.go"],
+    importpath = "github.com/aristorinjuang/microservices-go/user/internal",
+    visibility = ["//user:__subpackages__"],
+    deps = ["//user/pkg"],
+)
